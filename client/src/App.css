@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+.title {
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.prediction-container {
+  margin-top: 20px;
+}
+
+.prediction-text {
+  color: #333;
+}
