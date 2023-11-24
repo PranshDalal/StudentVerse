@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Student Data</title>
+</head>
+<body>
+    <h1>Previous Student Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>GPA</th>
+                <th>Tardies</th>
+                <th>Absences</th>
+                <th>Emotional Behavior</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in previous_data %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.gpa }}</td>
+                    <td>{{ student.tardies }}</td>
+                    <td>{{ student.absences }}</td>
+                    <td>{{ student.emotional_behavior }}</td>
+                    <td>{{ student.prediction }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
