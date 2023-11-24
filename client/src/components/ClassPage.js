@@ -33,7 +33,7 @@ const ClassPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/view_previous_data');
+        const response = await axios.get('https://studentverse.onrender.com/view_previous_data');
 
         if (Array.isArray(response.data)) {
           setStudents(response.data);
