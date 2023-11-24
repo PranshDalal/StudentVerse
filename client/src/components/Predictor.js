@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-//Importing CSS file
 import './Predictor.css';
 
 const Predictor = () => {
@@ -18,16 +17,27 @@ const Predictor = () => {
     // Add a delay to ensure that the form is visible
     const delay = setTimeout(() => {
       setFadeIn(true);
+      setZoom(); // Set initial zoom level
     }, 100);
 
-    return () => clearTimeout(delay);
+    // Set up event listener for window resize
+    window.addEventListener('resize', setZoom);
+
+    return () => {
+      clearTimeout(delay);
+      window.removeEventListener('resize', setZoom);
+    };
   }, []); // Run only on mount
+
+  const setZoom = () => {
+    const scaleFactor = window.innerWidth / 1200; // Adjust the base width as needed
+    document.body.style.zoom = scaleFactor;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // POST request to make the prediction
     try {
-      const response = await axios.post('https://studentverse.onrender.com/predict', {
+      const response = await axios.post('http://localhost:5000/predict', {
         name,
         email,
         gpa: parseFloat(gpa),
