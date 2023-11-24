@@ -76,4 +76,18 @@ body {
   .fade-in {
     opacity: 1;
   }
+
+  
+  @media screen and (max-width: 768px) {
+    .college-form {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .result-box {
+      max-width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   
