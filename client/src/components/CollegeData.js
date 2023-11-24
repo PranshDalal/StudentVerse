@@ -10,7 +10,7 @@ const CollegeData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/view_previous_data_college');
+        const response = await axios.get('https://studentverse.onrender.com/view_previous_data_college');
 
         if (Array.isArray(response.data)) {
           setStudents(response.data);
