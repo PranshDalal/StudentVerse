@@ -27,7 +27,7 @@ const Predictor = () => {
     e.preventDefault();
     // POST request to make the prediction
     try {
-      const response = await axios.post('http://localhost:5000/predict', {
+      const response = await axios.post('https://studentverse.onrender.com/predict', {
         name,
         email,
         gpa: parseFloat(gpa),
