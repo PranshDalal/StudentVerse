@@ -34,7 +34,7 @@ function CollegePrediction() {
     e.preventDefault();
     try {
       // Send the student data to the server
-      const response = await axios.post('http://127.0.0.1:5000/predict_college', {
+      const response = await axios.post('https://studentverse.onrender.com/predict_college', {
         ...formData,
         name,
         email,
