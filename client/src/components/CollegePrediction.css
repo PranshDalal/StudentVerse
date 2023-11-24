@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+  }
+  
+  .App {
+    position: relative;
+  }
+  
+  .college-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    z-index: 1;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .college-form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .college-form input,
+  .college-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .college-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #30a5c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .college-form button:hover {
+    background-color: #4562a0;
+  }
+  
+  .result-box {
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: 75%; 
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
